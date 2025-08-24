@@ -45,12 +45,11 @@
     show-bibliography-as-footnote: bibliography(title: none, "bibliography.bib"),
   ),
   config-info(
-    title: [Presentation Title],
-    subtitle: [Subtitle],
+    title: [Engineering the Collective in the Cloud-Edge Continuum],
+    subtitle: [Student Talk \@ SIESTA 2025],
     author: author_list(
       (
         (first_author("Nicolas Farabegoli"), "nicolas.farabegoli@unibo.it"),
-        ("Foo Bar", "foo@bar.com"),
       )
     ),
     date: datetime.today().display("[day] [month repr:long] [year]"),
@@ -82,11 +81,19 @@
 
 // #components.adaptive-columns(outline(title: none, indent: 1em))
 
-= Animation
+== Collective-Adaptive Systems
 
-== Simple Animation
+*Collective-adaptive Systems* #cite(label("DBLP:conf/birthday/BucchiaroneM19")) refers to systems with a _large number_ of entities interacting with each other in pursuing a #bold[collective] goal without a central coordinator.
 
-#pdfpc.speaker-note("This is a note that only the speaker will see.")
+  Actual _behaviour_ arises as an #alert[emergent] property of the system.
+
+  #components.side-by-side[
+    #figure(image("images/swarms.jpg", width: 75%))
+  ][
+    #figure(image("images/pedastrian.png", width: 100%))
+  ][
+    #figure(image("images/coldplay.jpg", width: 88%))
+  ]
 
 // #set text(font: "Fira Sans", weight: 350, size: 20pt)
 // #show math.equation: set text(font: "Fira Math")
