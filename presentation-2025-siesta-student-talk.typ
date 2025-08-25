@@ -4,6 +4,7 @@
 #import "@preview/ctheorems:1.1.3": *
 #import "@preview/numbly:0.1.0": numbly
 #import "utils.typ": *
+#import "@preview/tiaoma:0.3.0"
 
 // Pdfpc configuration
 // typst query --root . ./example.typ --field value --one "<pdfpc-file>" > ./example.pdfpc
@@ -153,23 +154,60 @@ How can we improve #bold[non-functional] properties like *latency* and *consumpt
   - #text(fill: orange)[Local] decisions only
   - #text(fill: red)[Oscillating] conditions
 
-  #fa-circle()
+  #align(center)[#fa-microchip(size: 2em)]
 ][
   === Decentralized Rules #cite(label("DBLP:journals/iot/FarabegoliPCV24"))
   - More #text(fill: orange)[complex] to define
   - #text(fill: green)[Global] decisions
   - #text(fill: green)[No Oscillating] conditions
 
-  #align(center)[#fa-globe()]
+  #align(center)[#fa-globe(size: 2em)]
 ][
   === Prolog Planner #cite(label("DBLP:conf/coordination/BrogiCFFV25"))
   - #text(fill: green)[Declarative] definition
   - #text(fill: green)[Global] optimum
   - #text(fill: orange)[Centralized] approach
 
-  #align(center)[#fa-brain()]
+  #align(center)[#fa-brain(size: 2em)]
 ]
 
+#focus-slide[What's *next*?]
+
+== Future Directions
+
+#components.side-by-side[
+  === Reconfig. via Learning
+
+  Integrate #underline[learning mechanisms] to adapt configurations over time.
+
+  *Graph Neural Network* for coping with #underline[heterogeneous devices] and #underline[dynamic conditions].
+
+  #align(center)[#fa-brain(size: 2em)]
+][
+  === Language Approach
+
+  Exploit #underline[type-systems] for encoding deployments of *CAS* in the *ECC*.
+
+  Integrate *AC* with relevant approaches such as #bold[multitier programming] and #bold[choreographies].
+
+  #align(center)[#fa-code(size: 2em)]
+][
+  === Real Deployments
+
+  Close the gap between *simulation* and *real-world* deployments.
+
+  Early (but cool) project on #bold[swarm robotics]:
+
+  #align(center)[
+    #tiaoma.qrcode("https://experiment.com/projects/project-emerge-an-open-source-swarm-robotics-platform", options: (
+      scale: 2.0,
+      // output-options: (
+      //   barcode-dotty-mode: true
+      // ),
+      // dot-size: 1.2em
+    ))
+  ]
+]
 // #slide[
 //   #bibliography("bibliography.bib")
 // ]
