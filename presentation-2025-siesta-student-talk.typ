@@ -95,88 +95,65 @@
     #figure(image("images/coldplay.jpg", width: 88%))
   ]
 
-// #set text(font: "Fira Sans", weight: 350, size: 20pt)
-// #show math.equation: set text(font: "Fira Math")
-// #set strong(delta: 200)
-// #set par(justify: true)
+== Aggregate Computing
 
-// #set quote(block: true)
-// #show quote: set align(left)
-// #show quote: set pad(x: 2em, y: -0.8em)
+#underline[Aggregate computing] #cite(label("DBLP:journals/computer/BealPV15")) as a way to #bold[engineer] *collective-adaptive systems*.
 
-// #set raw(tab-size: 4)
-// #show raw.where(block: true): block.with(
-//   fill: luma(240),
-//   inset: 1em,
-//   radius: 0.7em,
-//   width: 100%,
-// )
+#place(right, dx: -23.55em)[
+  #line(start: (0em, 0em), end: (0em, 55%), stroke: 0.05em + rgb("#23373b"))
+]
 
-// #show bibliography: set text(size: 0.8em)
-// #show footnote.entry: it => {
-//   block(inset: (x: 2em, y: 0.1em))[#text(size: 0.75em)[#it.note.body]]
-// }
+#v(1em)
 
-// #let fcite(clabel) = {
-//   footnote(cite(form: "full", label(clabel)))
-// }
+#components.side-by-side(columns: (auto, 1fr), gutter: 2em)[
+  #figure(image("images/channel.svg", height: 45%))
+][
+  #figure(image("images/ac.svg"))
+]
 
-// #let author = block(inset: 0.1em)[
-//   #table(inset: 0.5em, stroke: none, columns: (auto, 4fr),  align: (left, left),
-//     [#alert[*Author 1*]], [`author1@mail.com`],
-//     [Author 2], [`author2@mail.com`],
-//     [Author 3], [`author3@mail.com`],
-//   )
-//   #place(right, dy:-1.5em)[
-//     #figure(image("images/disi.svg", width:40%))
-//   ]
-// ]
+#v(1em)
 
-// #title-slide(
-//   title: "Slide Title",
-//   subtitle: "Subtitle",
-//   author: author,
-//   // date: datetime.today().display("[day] [month repr:long] [year]"),
-// )
+#align(center)[Typical deployments assume that all the devices #bold[can] execute the program.]
 
-// #new-section-slide("Slide section 1")
+== Cloud-Edge Continua
 
-== Slide
-*Bold* and _italic_ text.
+#components.side-by-side(columns: (2fr, auto), gutter: 2em)[
+  Aggregation of #bold[computational resources] along the data path from the *edge* to the *cloud* #cite(label("DBLP:journals/access/MoreschiniPLNHT22"))
 
-This is a citation #cite(label("DBLP:journals/fgcs/FarabegoliPCV24")).
-This another citation #cite(label("DBLP:journals/iot/FarabegoliPCV24"))
+  #v(1em)
 
-#alert[This is an alert.]
+  We must deal with different #bold[capabilities] and #bold[constraints]:
+  - edge devices for #underline[sense/acting], but *resources-constrained*
+  - cloud instances for #underline[scalability], but *latency/privacy* issues
+][
+  #figure(image("images/edge-cloud-continuum.svg", height: 70%))
+]
 
-== Code slide
+#focus-slide[What I have *done* so far...]
 
-```kotlin
-fun main() {
-    println("Hello, world!")
-    for (i in 0..9) {
-        println(i)
-    }
-    println("Goodbye, world!")
-}
-```
+== Pulverization
 
-== Title and subtitle slide
+#components.side-by-side(columns: (1fr, 1fr))[
+  #align(center)[#bold[Pulverisation] #cite(label("FARABEGOLI2024545"))]
+  #figure(image("images/pulverisation.svg", height: 49%))
+  
+][
+  #align(center)[#bold[Macro-program partitioning]]
+  #figure(image("images/collective-local-components.svg", height: 49%))
+]
 
-=== This is a subtitle
+How can we manage the components' #bold[reconfiguration] to cope with the *ECC*? \
+How can we improve #bold[non-functional] properties like *latency* and *consumption*?
 
-#lorem(24)
+== Reconfiguration
 
-=== This is a subtitle
-
-#lorem(34)
-
-== FontAwesome icons
-
-=== Icon in a title #fa-java()
-
-#fa-icon("github") -- Github icon \
-#fa-icon("github", fill: blue) -- Github icon blue fill
+#components.side-by-side[
+  === Local Rules #cite(label("FARABEGOLI2024545"))
+][
+  === Global Rules #cite(label("DBLP:journals/iot/FarabegoliPCV24"))
+][
+  === Prolog Placer #cite(label("DBLP:conf/coordination/BrogiCFFV25"))
+]
 
 // #slide[
 //   #bibliography("bibliography.bib")
