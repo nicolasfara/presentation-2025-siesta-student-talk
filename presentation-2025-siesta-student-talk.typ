@@ -138,7 +138,7 @@
   #figure(image("images/pulverisation.svg", height: 49%))
   
 ][
-  #align(center)[#bold[Macro-program partitioning]]
+  #align(center)[#bold[Macro-program partitioning] #cite(label("DBLP:conf/acsos/FarabegoliVC24"))]
   #figure(image("images/collective-local-components.svg", height: 49%))
 ]
 
@@ -147,12 +147,27 @@ How can we improve #bold[non-functional] properties like *latency* and *consumpt
 
 == Reconfiguration
 
-#components.side-by-side[
+#components.side-by-side(columns: (1fr, 1fr, 1fr))[
   === Local Rules #cite(label("FARABEGOLI2024545"))
+  - #text(fill: green)[Easy] to define
+  - #text(fill: orange)[Local] decisions only
+  - #text(fill: red)[Oscillating] conditions
+
+  #fa-circle()
 ][
-  === Global Rules #cite(label("DBLP:journals/iot/FarabegoliPCV24"))
+  === Decentralized Rules #cite(label("DBLP:journals/iot/FarabegoliPCV24"))
+  - More #text(fill: orange)[complex] to define
+  - #text(fill: green)[Global] decisions
+  - #text(fill: green)[No Oscillating] conditions
+
+  #align(center)[#fa-globe()]
 ][
-  === Prolog Placer #cite(label("DBLP:conf/coordination/BrogiCFFV25"))
+  === Prolog Planner #cite(label("DBLP:conf/coordination/BrogiCFFV25"))
+  - #text(fill: green)[Declarative] definition
+  - #text(fill: green)[Global] optimum
+  - #text(fill: orange)[Centralized] approach
+
+  #align(center)[#fa-brain()]
 ]
 
 // #slide[
