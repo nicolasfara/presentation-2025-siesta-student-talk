@@ -221,11 +221,6 @@ How can we improve #bold[non-functional] properties like *latency* and *consumpt
     #tiaoma.qrcode("https://www.linkedin.com/in/nicolas-farabegoli/", options: (scale: 4.0, fg-color: white))
   ]
 
-  #place(bottom + left, dx: 2em, dy: -2em)[
-    #text(size: 1.2em, fill: white, weight: "bold")[keep in touch]
-    #h(1em)
-    #text(size: 2em, fill: white)[#sym.arrow.ne]
-  ]
   
 ]
 // #slide[
