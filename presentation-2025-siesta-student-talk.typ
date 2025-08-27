@@ -51,6 +51,7 @@
     author: author_list(
       (
         (first_author("Nicolas Farabegoli"), "nicolas.farabegoli@unibo.it"),
+        ("Supervisor:", "Mirko Viroli")
       )
     ),
     date: datetime.today().display("[day] [month repr:long] [year]"),
@@ -126,6 +127,10 @@
   We must deal with different #bold[capabilities] and #bold[constraints]:
   - edge devices for #underline[sense/acting], but *resources-constrained*
   - cloud instances for #underline[scalability], but *latency/privacy* issues
+
+  #only(2)[
+    How can we #bold[opportunistically] expolit such additional resources?
+  ]
 ][
   #figure(image("images/edge-cloud-continuum.svg", height: 70%))
 ]
@@ -180,7 +185,7 @@ How can we improve #bold[non-functional] properties like *latency* and *consumpt
 
   Integrate #underline[learning mechanisms] to adapt configurations over time.
 
-  *Graph Neural Network* for coping with #underline[heterogeneous devices] and #underline[dynamic conditions].
+  *Graph Neural Network* for coping with #bold[heterogeneous devices] and #bold[dynamic conditions].
 
   #align(center)[#fa-brain(size: 2em)]
 ][
@@ -194,7 +199,7 @@ How can we improve #bold[non-functional] properties like *latency* and *consumpt
 ][
   === Real Deployments
 
-  Close the gap between *simulation* and *real-world* deployments.
+  #underline[Close the gap] between *simulation* and *real-world* deployments.
 
   Early (but cool) project on #bold[swarm robotics]:
 
@@ -207,6 +212,21 @@ How can we improve #bold[non-functional] properties like *latency* and *consumpt
       // dot-size: 1.2em
     ))
   ]
+]
+
+#focus-slide[
+  Thank you for your *attention*!
+
+  #align(center)[
+    #tiaoma.qrcode("https://www.linkedin.com/in/nicolas-farabegoli/", options: (scale: 4.0, fg-color: white))
+  ]
+
+  #place(bottom + left, dx: 2em, dy: -2em)[
+    #text(size: 1.2em, fill: white, weight: "bold")[keep in touch]
+    #h(1em)
+    #text(size: 2em, fill: white)[#sym.arrow.ne]
+  ]
+  
 ]
 // #slide[
 //   #bibliography("bibliography.bib")
